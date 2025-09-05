@@ -1,0 +1,11 @@
+@EndUserText.label: 'Restrict Access to flights 00'
+@MappingRole: true
+define role Z00_R_TRAVEL {
+    grant 
+        select
+            on
+                Z00_R_TRAVEL
+                    where
+                        (AgencyId) = aspect pfcg_auth(/lrn/agcy, /lrn/agcy,  actvt = '03');
+                        
+}
